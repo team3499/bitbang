@@ -1,4 +1,5 @@
 #include "Commands/BitBangCommand.h"
+#include "Utils/BitBangReport.h"
 
 BitBangCommand::BitBangCommand() {
     Requires(gpioSubsystem);
@@ -18,7 +19,8 @@ bool BitBangCommand::IsFinished() {
 }
 
 void BitBangCommand::End() {
-    // TODO Output Report
+    BitBangReport report;
+    report.Report(this);
 }
 
 void BitBangCommand::Interrupted() {
