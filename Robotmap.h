@@ -19,4 +19,6 @@
 // #define RANGE_FINDER_PORT 1
 // #define RANGE_FINDER_MODULE 1
 
+#define GPIO_CHANNEL                 3
+
 #endif

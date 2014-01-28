@@ -2,7 +2,7 @@
 #define COMMAND_BASE_H
 
 #include "Commands/Command.h"
-#include "Subsystems/ExampleSubsystem.h"
+#include "Subsystems/GPIOSubsystem.h"
 #include "OI.h"
 
 
@@ -13,12 +13,12 @@
  */
 class CommandBase: public Command {
 public:
-	CommandBase(const char *name);
-	CommandBase();
-	static void init();
-	// Create a single static instance of all of your subsystems
-	static ExampleSubsystem *examplesubsystem;
-	static OI *oi;
+    CommandBase(const char * name);
+    CommandBase();
+    static void init();
+
+    static GPIOSubsystem * gpioSubsystem;
+    static OI * oi;
 };
 
 #endif
