@@ -20,6 +20,7 @@ class BitBangCommand : public CommandBase {
 
   private:
     double timestamps[BIT_BANG_COMMAND_TIMESTAMP_COUNT];
+    double offset;
 };
 
 #endif /* __BIT_BANG_COMMAND_H__ */
